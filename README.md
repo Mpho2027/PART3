@@ -40,43 +40,7 @@ A WPF-based (XAML / C#) Cybersecurity Awareness Chatbot built on top of the Part
 - Logged events include: task added/completed/deleted, quiz started/completed, NLP interactions, session start
 - Displays **last 10 actions** in the Activity Log tab
 - Accessible via chat: type `show activity log` or `what have you done`
-- Clear log button available in the tab
-
----
-
-## Setup Instructions
-
-### 1. Database Setup (SQL Server)
-
-Open **SQL Server Management Studio (SSMS)** and run the file:
-
-```
-TaskChatDB.sql
-```
-
-This creates the `TaskChat` database and the `Tasks` table.
-
-### 2. Update Connection String (if needed)
-
-Open `DatabaseHelper.cs` and check the connection string:
-
-```csharp
-private const string ConnectionString =
-    @"Server=(localdb)\MSSQLLocalDB;Database=TaskChat;Trusted_Connection=True;TrustServerCertificate=True;";
-```
-
-- Change `Database=TaskChat` if your database has a different name
-- Change `Server=` if you are using a named SQL Server instance (e.g. `Server=.\SQLEXPRESS`)
-
-### 3. Open in Visual Studio
-
-1. Open Visual Studio
-2. Open the solution file (`taskChatt.csproj` or the `.slnx` file)
-3. In Solution Explorer, **right-click `taskChatt`** → **Set as Startup Project**
-4. Press the green **Start** button to run
-
----
-
+- Clear log button available in 
 ## Project Structure
 
 ```
@@ -115,24 +79,6 @@ taskChatt/
 | `firewall` | Firewall explanation |
 | `backup` | Data backup advice |
 | `how are you` | Casual greeting |
-| `my favorite topic is X` | Stores your favourite topic in memory |
-
----
-
-## Technologies Used
-
-- **C# / .NET 8** — Core language and runtime
-- **WPF (Windows Presentation Foundation)** — GUI framework
-- **XAML** — UI layout and styling
-- **Microsoft.Data.SqlClient** — SQL Server database connectivity
-- **SQL Server / LocalDB** — Task storage
-
----
-
-## GitHub Submission Checklist
-
-- [ ] Minimum **6 commits** with meaningful messages
-- [ ] Minimum **3 releases / tags**
-- [ ] README included
+| `my favorite topic is X` | Stores your favourite topic in 
 - [ ] `TaskChatDB.sql` script included
 - [ ] All source files committed (no bin/obj folders)
